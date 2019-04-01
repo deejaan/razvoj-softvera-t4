@@ -1,5 +1,7 @@
 package sample;
 
+import java.util.ArrayList;
+
 public class Artikal {
     private String sifra, naziv;
     private double cijena;
@@ -9,6 +11,17 @@ public class Artikal {
         sifra = ulazni_podaci[0];
         naziv = ulazni_podaci[1];
         cijena = Double.parseDouble(ulazni_podaci[2]);
+    }
+
+    public boolean equals(Object o) {
+        Artikal artikal = (Artikal)o;
+        if(this.sifra.equals(artikal.sifra) && this.naziv.equals(artikal.naziv) && this.cijena==artikal.cijena)
+            return true;
+        else return false;
+    }
+    public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli) {
+        ArrayList<Artikal> rezultat = new ArrayList<Artikal>();
+        return rezultat;
     }
 
     public String toString() {
