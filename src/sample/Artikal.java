@@ -14,6 +14,7 @@ public class Artikal {
     }
 
     public boolean equals(Object o) {
+
         Artikal artikal = (Artikal)o;
         if(this.sifra.equals(artikal.sifra) && this.naziv.equals(artikal.naziv) && this.cijena==artikal.cijena)
             return true;

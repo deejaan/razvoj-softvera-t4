@@ -27,4 +27,12 @@ public class Racun {
             kolicina = kol;
         }
     }
+    public String toString() {
+        String str = "";
+        for(Stavka s: stavke) {
+            str += String.format("%-8s %-4d %.2f\n", s.artikal.getSifra(), s.kolicina, s.kolicina * s.artikal.getCijena());
+        }
+        str += String.format("%-12s %-4d %.2f\n", "UKUPNO:")
+        return str;
+    }
 }
